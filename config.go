@@ -58,7 +58,7 @@ func (cors *cors) applyCors(c *gin.Context) {
 	origin := c.Request.Header.Get("Origin")
 	host := c.Request.Header.Get("Host")
 
-	if origin != "" and (origin == "http://"+host || origin == "https://"+host) {
+	if origin != "" && (origin == "http://"+host || origin == "https://"+host) {
 		// request is not a CORS request but have origin header.
 		// for example, use fetch api
 		return
